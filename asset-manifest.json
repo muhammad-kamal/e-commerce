@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/e-commerce/static/css/main.42993ffd.css",
+    "main.js": "/e-commerce/static/js/main.acfbd10d.js",
+    "static/media/night.png": "/e-commerce/static/media/night.af86163dd480e7244327.png",
+    "static/media/womenCoat.png": "/e-commerce/static/media/womenCoat.ada8fe001731c6349092.png",
+    "static/media/childFormal1.png": "/e-commerce/static/media/childFormal1.c7d63e94cf5d003b5dd2.png",
+    "static/media/day2.jpg": "/e-commerce/static/media/day2.a77399b925b2ffa673c0.jpg",
+    "static/media/womenShirt2.jpg": "/e-commerce/static/media/womenShirt2.349a6ef6fb44adc5c5db.jpg",
+    "static/media/menJacket.jpg": "/e-commerce/static/media/menJacket.fb2b338dd24963a71395.jpg",
+    "static/media/womenDress.jpg": "/e-commerce/static/media/womenDress.3e71ff1325c7b8382631.jpg",
+    "static/media/childOutfit1.jpg": "/e-commerce/static/media/childOutfit1.946c2ce954ac34bd1b9b.jpg",
+    "static/media/childPajama2.jpg": "/e-commerce/static/media/childPajama2.9976b2186d06491b275a.jpg",
+    "static/media/menShirt.jpg": "/e-commerce/static/media/menShirt.de77ef4b6902069742b2.jpg",
+    "static/media/menTrousers.jpg": "/e-commerce/static/media/menTrousers.88711b1629f3298dd3e6.jpg",
+    "static/media/sign.svg": "/e-commerce/static/media/sign.50a1ae4d69e03d0d2ec9a8e6ac9fd65d.svg",
+    "index.html": "/e-commerce/index.html",
+    "main.42993ffd.css.map": "/e-commerce/static/css/main.42993ffd.css.map",
+    "main.acfbd10d.js.map": "/e-commerce/static/js/main.acfbd10d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42993ffd.css",
+    "static/js/main.acfbd10d.js"
+  ]
+}
