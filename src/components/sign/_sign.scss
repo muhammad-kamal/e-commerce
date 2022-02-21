@@ -1,0 +1,113 @@
+.signBox{
+    position: relative;
+    margin: 40px auto;
+    width: 40%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 360px;
+    height: 500px;
+}
+
+.signBox img {
+    max-width: 100%;
+}
+
+.signBox form {
+    color: black;
+    padding: 20px;
+    z-index: 2;
+}
+
+.signBox > div{
+    position: absolute;
+}
+
+@media(max-width : 800px){
+    .signBox form {
+        width: 100%;
+        order: 2;
+    }
+    
+    .signBox > div{
+        width: 100%;
+        order: 1;
+    }
+}
+
+.signBox input:focus{
+    border-color: #E27208;
+    box-shadow: 0 0 0 0.25rem rgba($color: #E27208, $alpha: .5);
+}
+
+.signBox input:checked{
+    background-color: #E27208;
+}
+
+.signBox button{
+    background-color: #E27208;
+    border-color: #E27208;
+}
+
+.signBox button:hover{
+    color: black;
+    background-color: #e27108a4;
+}
+
+.sign-in{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: white, $alpha: .7);
+    transition: 1s;
+    border-radius: 8px;
+}
+
+.sign-up{
+    transition: 1s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba($color: white, $alpha: .7);
+    z-index: 1;
+}
+
+.account{
+    line-height: .8;
+    margin-top: 30px;
+}
+
+.account button{
+    color: white;
+    background-color: #E27208;
+    border-color: #E27208;
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: .8s;
+}
+
+.account button:hover{
+    border-color: black;
+}
+
+.signImg{
+    animation-name: shaking;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shaking{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

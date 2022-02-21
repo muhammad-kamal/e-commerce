@@ -1,0 +1,31 @@
+.navI.active{
+    color : white !important;
+    background-color : rgba($color: rgb(26, 24, 24), $alpha: .5) !important;
+}
+.navI{
+    position: relative;
+    font :{
+        size: 20px;
+        weight : bold;
+    }
+    color: rgba($color: white, $alpha: .7);
+    transition: .8s;
+    &:hover{
+    color: rgba($color: white, $alpha: 1);
+    }
+    border: 1px solid !important;
+    margin: 2px;
+}
+
+.navI span{
+    position: absolute;
+    right: 20px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(226, 114, 8, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

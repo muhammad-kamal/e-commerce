@@ -1,0 +1,44 @@
+.head{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 4px;
+        background-color: rgba(226, 114, 8, 0.589);
+        border-radius: 2px;
+    }
+}
+
+
+@media(max-width : 575px){
+    .jcenter{
+        justify-content: center !important;
+    }
+}
+
+.headCap{
+    font : {
+        size: 30px;
+        weight : bold;
+    }
+    letter-spacing: 2px;
+}
+
+.searchI{
+    border-radius: 0;
+    &:focus{
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.searchB{
+    padding: 8px 15px;
+    border: none;
+    font-weight: bold;
+    background-color: rgba(226, 114, 8, 0.589);
+}
