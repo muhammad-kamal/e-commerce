@@ -19,6 +19,14 @@ function App() {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
+  // cart items price
+  const[priceSum,setPriceSum] = useState(Number(window.localStorage.getItem("priceSum")) || 0)
+  useEffect(() => window.localStorage.setItem("priceSum" , priceSum),[priceSum])
+
+  // add to cart button disable
+  const[addCart,setAddCart] = useState(false)
+
+
   // choosen items
   const [choosenItems, setChoosenItems] = useState(
     JSON.parse(localStorage.getItem("choosenItems")) || []
@@ -46,6 +54,8 @@ function App() {
                   <Home
                     choosenItems={choosenItems}
                     setChoosenItems={setChoosenItems}
+                    addCart={addCart}
+                    setAddCart={setAddCart}
                   />
                 }
               />
@@ -56,6 +66,8 @@ function App() {
                   <Cart
                     choosenItems={choosenItems}
                     setChoosenItems={setChoosenItems}
+                    priceSum={priceSum}
+                    setPriceSum={setPriceSum}
                   />
                 }
               />

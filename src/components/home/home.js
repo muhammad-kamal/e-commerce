@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Products from "./products";
 import "./_home.css";
 
-const Home = ({ choosenItems, setChoosenItems }) => {
+const Home = ({ choosenItems, setChoosenItems ,addCart, setAddCart}) => {
   const [pros, setPros] = useState(Products);
   const filterPros = (c) => {
     const newItems = Products.filter((targetC) => {
@@ -11,7 +11,9 @@ const Home = ({ choosenItems, setChoosenItems }) => {
     setPros(newItems);
   };
 
-
+  const addDisabled = () => {
+    setAddCart(!addCart)
+  };
 
   return (
     <>
@@ -94,8 +96,10 @@ const Home = ({ choosenItems, setChoosenItems }) => {
                     Price : {item.price}
                   </p>
                   <button
-                    onClick={() => {
+                    id={item.name}
+                    onClick={(e) => {
                       setChoosenItems([...choosenItems, item]);
+                      addDisabled();
                     }}
                     className="btn btn-dark fs-5 addbtn"
                   >

@@ -50,3 +50,7 @@
 .filterItem li:not(:last-child){
     border-bottom: 2px solid #eee;
 }
+
+.disable{
+    pointer-events : none;
+}

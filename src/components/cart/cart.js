@@ -1,14 +1,19 @@
-import React, { useEffect, useState ,useRef} from "react";
+import React, { useState } from "react";
 import "./_cart.css";
 
-const Cart = ({ choosenItems, setChoosenItems}) => {
+const Cart = ({ choosenItems, setChoosenItems, priceSum, setPriceSum }) => {
   const removeItem = (e) => {
-    let newI = choosenItems.filter((item) => {
+    let removeP = choosenItems.filter((item) => {
       return item.id != e;
     });
-    setChoosenItems(newI);
+    setChoosenItems(removeP);
   };
-  let sum = 0;
+
+  const [choosenCost, setChoosenCost] = useState(
+    [...new Set(choosenItems)]
+      .map((e) => parseInt(e.price))
+      .reduce((acc, curr) => acc + curr, 0) || 0
+  );
 
   const increaseCounter = (e) => {
     if (e.target.nextElementSibling.innerHTML == 100) {
@@ -20,6 +25,7 @@ const Cart = ({ choosenItems, setChoosenItems}) => {
       e.target.nextElementSibling.innerHTML
     );
   };
+
   const dicreaseCounter = (e) => {
     if (e.target.previousElementSibling.innerHTML == 1) {
       return;
@@ -49,6 +55,7 @@ const Cart = ({ choosenItems, setChoosenItems}) => {
                   className="mx-2"
                   onClick={(e) => {
                     increaseCounter(e);
+                    setPriceSum((priceSum += parseInt(i.price)));
                   }}
                 >
                   +
@@ -56,14 +63,28 @@ const Cart = ({ choosenItems, setChoosenItems}) => {
                 <p className="m-2" id={i.name}>
                   {window.localStorage.getItem(i.name) || "1"}
                 </p>
-                <button className="mx-2" onClick={(e) => dicreaseCounter(e)}>
+                <button
+                  className="mx-2"
+                  id={i.id}
+                  onClick={(e) => {
+                    dicreaseCounter(e);
+                    setPriceSum(priceSum -= parseInt(i.price))
+                  }}
+                >
                   -
                 </button>
                 <button
                   className="fw-bold removeBtn"
-                  onClick={() => {
+                  onClick={(e) => {
                     removeItem(i.id);
+                    setPriceSum(
+                      (priceSum -=
+                        parseInt(i.price) * (window.localStorage.getItem(i.name) - 1))
+                    );
                     window.localStorage.removeItem(i.name);
+                    setChoosenCost([...new Set(choosenItems)]
+                    .map((e) => parseInt(e.price))
+                    .reduce((acc, curr) => acc + curr, 0) - parseInt(i.price));
                   }}
                 >
                   remove
@@ -76,21 +97,17 @@ const Cart = ({ choosenItems, setChoosenItems}) => {
       <div className="container cartBox">
         <div className="h3 cartTitle">BILL</div>
         <div className="d-flex justify-content-around">
-          <div className="cost">
-            Total cost :{" "}
-            {
-              (sum =
-                [
-                  ...new Set(choosenItems.map((ele) => parseInt(ele.price))),
-                ].reduce((acc, curr) => acc + curr, 0) || 0)
-            }            
-            $
-          </div>
+          <div className="cost">Total cost : {priceSum + choosenCost}$</div>
           <div className="buyBtns">
             <button className="mx-1 px-2 fw-bold">Buy now</button>
             <button
               className="mx-1 px-2 fw-bold"
-              onClick={() => setChoosenItems([])}
+              onClick={() => {
+                setChoosenItems([]);
+                window.localStorage.clear();
+                setPriceSum(0);
+                setChoosenCost(0)
+              }}
             >
               Empty Cart
             </button>
