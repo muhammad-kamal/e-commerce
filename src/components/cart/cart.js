@@ -67,8 +67,8 @@ const Cart = ({ choosenItems, setChoosenItems, priceSum, setPriceSum }) => {
                   className="mx-2"
                   id={i.id}
                   onClick={(e) => {
+                    setPriceSum(priceSum - (parseInt(i.price) * (window.localStorage.getItem(i.name) > 1 ? 1 : 0)))
                     dicreaseCounter(e);
-                    setPriceSum(priceSum -= parseInt(i.price))
                   }}
                 >
                   -
@@ -77,14 +77,11 @@ const Cart = ({ choosenItems, setChoosenItems, priceSum, setPriceSum }) => {
                   className="fw-bold removeBtn"
                   onClick={(e) => {
                     removeItem(i.id);
-                    setPriceSum(
-                      (priceSum -=
-                        parseInt(i.price) * (window.localStorage.getItem(i.name) - 1))
-                    );
+
+                    setPriceSum(priceSum - (parseInt(i.price) * (window.localStorage.getItem(i.name) > 1 ? (Number(window.localStorage.getItem(i.name)) - 1) : 0)))
                     window.localStorage.removeItem(i.name);
-                    setChoosenCost([...new Set(choosenItems)]
-                    .map((e) => parseInt(e.price))
-                    .reduce((acc, curr) => acc + curr, 0) - parseInt(i.price));
+
+                    setChoosenCost(choosenCost - parseInt(i.price))
                   }}
                 >
                   remove
