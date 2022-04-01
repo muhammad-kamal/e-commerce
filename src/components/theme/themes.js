@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import day from "./day2.jpg";
+import day from "../home/imgs/day.jpeg";
 import night from "./night.png";
 
 export const lightTheme = {

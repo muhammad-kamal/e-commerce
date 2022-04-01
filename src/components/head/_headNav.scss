@@ -1,6 +1,6 @@
 .navI.active{
     color : white !important;
-    background-color : rgba($color: rgb(26, 24, 24), $alpha: .5) !important;
+    background-color : rgba($color: rgb(26, 24, 24), $alpha: .8) !important;
 }
 .navI{
     position: relative;
@@ -8,13 +8,14 @@
         size: 20px;
         weight : bold;
     }
-    color: rgba($color: white, $alpha: .7);
+    color: rgba($color: white, $alpha: .7) !important;
     transition: .8s;
     &:hover{
     color: rgba($color: white, $alpha: 1);
     }
     border: 1px solid !important;
     margin: 2px;
+    background-color: rgba(black, .6) !important;
 }
 
 .navI span{

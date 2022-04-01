@@ -8,6 +8,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./components/home/home";
 import Cart from "./components/cart/cart";
 import Sign from "./components/sign/sign";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const StyleApp = styled.div`
   color: ${(props) => props.theme.text};
@@ -73,7 +74,9 @@ function App() {
               />
             </Routes>
           </BrowserRouter>
-          <button onClick={() => themeToggler()} className="themeI"></button>
+          <button onClick={() => themeToggler()} className="themeI">
+                  <DarkModeIcon />
+          </button>
         </StyleApp>
       </ThemeProvider>
     </>

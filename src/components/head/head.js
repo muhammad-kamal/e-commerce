@@ -1,4 +1,5 @@
 import "./_head.css";
+import SearchIcon from '@mui/icons-material/Search';
 
 function Head() {
   return (
@@ -16,7 +17,7 @@ function Head() {
             placeholder="Search"
           />
           <div className="searchB" type="submit">
-            <i className="fas fa-search"></i>
+            <SearchIcon />
           </div>
         </form>
         </div>
