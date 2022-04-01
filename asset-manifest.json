@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/e-commerce/static/css/main.92909f23.css",
-    "main.js": "/e-commerce/static/js/main.d52ff0f3.js",
+    "main.css": "/e-commerce/static/css/main.ac420afd.css",
+    "main.js": "/e-commerce/static/js/main.95f86b5a.js",
     "static/media/night.png": "/e-commerce/static/media/night.af86163dd480e7244327.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/e-commerce/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/womenCoat.png": "/e-commerce/static/media/womenCoat.ada8fe001731c6349092.png",
     "static/media/childFormal1.png": "/e-commerce/static/media/childFormal1.c7d63e94cf5d003b5dd2.png",
-    "static/media/day2.jpg": "/e-commerce/static/media/day2.a77399b925b2ffa673c0.jpg",
+    "static/media/day.jpeg": "/e-commerce/static/media/day.ea249f07582a95615ffa.jpeg",
     "static/media/fontawesome-webfont.eot": "/e-commerce/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/e-commerce/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/e-commerce/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
@@ -20,11 +20,11 @@
     "static/media/menTrousers.jpg": "/e-commerce/static/media/menTrousers.88711b1629f3298dd3e6.jpg",
     "static/media/sign.svg": "/e-commerce/static/media/sign.50a1ae4d69e03d0d2ec9a8e6ac9fd65d.svg",
     "index.html": "/e-commerce/index.html",
-    "main.92909f23.css.map": "/e-commerce/static/css/main.92909f23.css.map",
-    "main.d52ff0f3.js.map": "/e-commerce/static/js/main.d52ff0f3.js.map"
+    "main.ac420afd.css.map": "/e-commerce/static/css/main.ac420afd.css.map",
+    "main.95f86b5a.js.map": "/e-commerce/static/js/main.95f86b5a.js.map"
   },
   "entrypoints": [
-    "static/css/main.92909f23.css",
-    "static/js/main.d52ff0f3.js"
+    "static/css/main.ac420afd.css",
+    "static/js/main.95f86b5a.js"
   ]
 }
